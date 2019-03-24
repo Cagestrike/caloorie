@@ -28,9 +28,9 @@ function displaySuggestions() {
         for (let type in data) {
             console.log(type);
 
-            const h1 = document.createElement('h1');
-            h1.textContent = type;
-            dropdown.append(h1);
+            const h2 = document.createElement('h2');
+            h2.textContent = type;
+            instantList.append(h2);
 
             // data[type].forEach(food => {
             //     console.log(food.food_name);
@@ -42,7 +42,15 @@ function displaySuggestions() {
             for (let i = 0; i < 5; i++) {
                 console.log(data[type][i].food_name);
                 const li = document.createElement('li');
-                li.textContent = data[type][i].food_name;
+                const div = document.createElement('div');
+                div.setAttribute('class', 'food-item');
+                li.appendChild(div);
+                const thumbnail = document.createElement('img');
+                const foodName = document.createElement('p');
+                thumbnail.setAttribute('src', data[type][i].photo.thumb);
+                foodName.textContent = data[type][i].food_name;
+                div.appendChild(thumbnail);
+                div.append(foodName);
                 instantList.appendChild(li);
             }
 
