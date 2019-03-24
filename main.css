@@ -1,8 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: darkgreen;
+}
+
 #dropdown {
     display: block;
     border: solid blue 1px;
-    /* position: relative; */
-    left: 0;
+    width: 25%;
+}
+
+#search-box {
+    box-sizing: border-box;
+    /* box-shadow: 1px 1px 4px #EBEBEB; */
+    background-color: darkgray;
+    border: none;
+    width: 25%;
+    height: 24px;
 }
 
 .hidden {

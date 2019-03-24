@@ -24,21 +24,27 @@ function displaySuggestions() {
     request.onload = function () {
         let data = JSON.parse(this.response);
 
-        console.log(data);
+        // console.log(data);
         for (let type in data) {
             console.log(type);
 
             const h1 = document.createElement('h1');
             h1.textContent = type;
             dropdown.append(h1);
-            // const ul = document.createElement('ul');
 
-            data[type].forEach(food => {
-                console.log(food.food_name);
+            // data[type].forEach(food => {
+            //     console.log(food.food_name);
+            //     const li = document.createElement('li');
+            //     li.textContent = food.food_name;
+            //     instantList.appendChild(li);
+            // });
+
+            for (let i = 0; i < 5; i++) {
+                console.log(data[type][i].food_name);
                 const li = document.createElement('li');
-                li.textContent = food.food_name;
+                li.textContent = data[type][i].food_name;
                 instantList.appendChild(li);
-            });
+            }
 
             dropdown.append(instantList);
         }
