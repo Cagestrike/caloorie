@@ -5,11 +5,22 @@
 
 ul {
     list-style: none;
+    border-left: solid gray 1px;
+    border-right: solid gray 1px;
+}
+
+ul h2 {
+    border-bottom: solid gray 1px;
+}
+
+li:hover {
+    background-color: rgb(211, 211, 211);
 }
 
 #app {
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
     align-items: center;
     width: 100vw;
     height: 100vh;
@@ -20,25 +31,45 @@ ul {
     display: block;
     background-color: white;
     width: 25%;
+    overflow: auto;
 }
 
 #search-box {
     box-sizing: border-box;
-    background-color: darkgray;
+    /* background-color: darkgray; */
     border: none;
+    border-bottom: solid darkgray 1px;
     width: 25%;
     height: 24px;
 }
 
+#search-box:focus {
+    outline: none;
+}
+
 .food-item {
     display: flex;
+    flex: 50%;
     cursor: pointer;
-    border-top: solid gray 1px;
     border-bottom: solid gray 1px;
+    /* justify-content: space-between; */
+}
+
+.food-item p {
+    /* display: none; */
+    display: block;
+}
+
+.img-wrapper {
+    width: 48px;
 }
 
 .food-item img {
-    height: 40px;
+    display: block;
+    height: 32px;
+    margin: 8px auto;
+    max-height: 35px;
+    max-width: 35px;
 }
 
 .hidden {
