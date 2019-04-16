@@ -1,12 +1,15 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: darkgreen;
 }
 
 ul {
     list-style: none;
-    border-left: solid gray 1px;
-    border-right: solid gray 1px;
 }
 
 ul h2 {
@@ -22,9 +25,21 @@ li:hover {
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
+    /* width: 100vw;
+    height: 100vh; */
+}
+
+#search-screen {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: darkgreen;
+}
+
+#calorie-screen {
+    display: none;
 }
 
 #dropdown {
@@ -32,6 +47,8 @@ li:hover {
     background-color: white;
     width: 25%;
     overflow: auto;
+    border-left: solid gray 1px;
+    border-right: solid gray 1px;
 }
 
 #search-box {
