@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: darkgreen;
+    background-color: rgb(38, 129, 38);
 }
 
 ul {
@@ -16,14 +16,18 @@ ul h2 {
     border-bottom: solid gray 1px;
 }
 
+h1 {
+    margin-bottom: 16px;
+}
+
 li:hover {
     background-color: rgb(211, 211, 211);
 }
 
 #app {
     display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
+    /* flex-direction: column; */
+    justify-content: center;
     align-items: center;
     /* width: 100vw;
     height: 100vh; */
@@ -40,6 +44,11 @@ li:hover {
 
 #calorie-screen {
     display: none;
+}
+
+#calorie-screen.show {
+    display: flex;
+    flex-direction: column;
 }
 
 #dropdown {
